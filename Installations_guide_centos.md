@@ -25,10 +25,15 @@
 - cd /usr/local/src
 - sudo su
 - wget https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
-- tar -xf apache-maven-3.5.4-bin.tar.gz
-- mv apache-maven-3.5.4/ apache-maven/
+- tar -xf apache-maven-3.8.4-bin.tar.gz
+- mv apache-maven-3.8.4/ apache-maven/
 - cd /etc/profile.d/
 - vim maven.sh
+-  add below code to maven.sh configuration
+# Apache Maven Environment Variables
+# MAVEN_HOME for Maven 1 - M2_HOME for Maven 2
+export M2_HOME=/usr/local/src/apache-maven
+export PATH=${M2_HOME}/bin:${PATH}
 - chmod +x maven.sh
 - ls
 - source /etc/profile.d/maven.sh
