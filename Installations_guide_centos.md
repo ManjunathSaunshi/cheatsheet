@@ -4,6 +4,10 @@
 - chkconfig httpd on
 - cd /var/www/html/
 
+## Install open JDK 8 (java development Kit)
+- yum install -y java-1.8.0-openjdk-devel
+- java -version
+
 ## Terraform installation in Centos
 
 - SSH into your cloud server
@@ -21,7 +25,7 @@
 
 ## Maven installation in Centos
 
-- java -version (if java and JDK already exists follow below steps else , refer link mentioned at the end)
+- java -version (if java and JDK already exists follow below steps else , refer top -2 instructions)
 - cd /usr/local/src
 - sudo su
 - wget https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
